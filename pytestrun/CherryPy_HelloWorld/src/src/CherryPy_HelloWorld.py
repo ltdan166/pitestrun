@@ -30,7 +30,7 @@ class HelloCherry:
     blink.exposed = True
 
 import os.path
-tutconf = os.path.join('/home/pi/Desktop/', 'tutorial.conf')
+tutconf = os.path.join(os.path.dirname(__file__), 'tutorial.conf')
 
 if __name__ == '__main__':
     cherrypy.quickstart(HelloCherry(), config=tutconf)
